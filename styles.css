@@ -23,6 +23,7 @@ body {
     radial-gradient(900px 450px at 8% -8%, rgba(74,167,255,.24), transparent 70%),
     radial-gradient(850px 420px at 95% 10%, rgba(45,224,198,.20), transparent 70%),
     linear-gradient(180deg, #060b18, #0b1328 45%, #091227);
+  padding-bottom: 92px;
 }
 
 .bg-grid {
@@ -233,6 +234,32 @@ h1 {
   font-size: 14px;
 }
 
+.floating-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, rgba(6, 11, 24, 0.35), rgba(6, 11, 24, 0.92));
+  border-top: 1px solid rgba(132, 177, 255, 0.26);
+  backdrop-filter: blur(8px);
+}
+
+.floating-inner {
+  width: min(1120px, 96%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.floating-text {
+  font-size: 14px;
+  color: #cfe2ff;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -272,4 +299,6 @@ h1 {
   .hero { padding-top: 28px; }
   .lead { font-size: 16px; }
   .plan .price { font-size: 36px; }
+  .floating-text { font-size: 13px; }
+  .floating-inner .btn { padding: 10px 12px; }
 }
